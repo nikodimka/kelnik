@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Index page</title>
+		<link rel="stylesheet" href="assets/css/vendor.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="container clearfix">
+            <div class="flats">
+                <h1 class="title-page">Квартиры</h1>
+                <div class="flats-item flats-item__title">
+                    <div class="flats-item__plan-title">Планировка</div>
+                    <div class="flats-item__name-title">Квартира</div>
+                    <div class="flats-item__square-title">
+                        <span class="arrow-text">S, м<sup>2</sup>
+                            <i class="arrow-up"></i>
+                            <i class="arrow-down"></i>
+                        </span>
+                    </div>
+                    <div class="flats-item__floor-title">
+                        <span class="arrow-text">Этаж
+                            <i class="arrow-up"></i>
+                            <i class="arrow-down"></i>
+                        </span>
+                    </div>
+                    <div class="flats-item__price-title text-green">
+                        <span class="arrow-text">Цена, ₽
+                            <i class="arrow-up active"></i>
+                            <i class="arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="flats-items">
+                </div> 
+                <div class="flats-btn"><button class="btn">Загрузить еще 11 из 15</button></div>               
+            </div>            
+            <div class="filters">
+                <div class="filters-rooms">
+                    <button class="filters-rooms__btn" data-room="1">1к</button>
+                    <button class="filters-rooms__btn active" data-room="2">2к</button>
+                    <button class="filters-rooms__btn" data-room="3">3к</button>
+                    <button class="filters-rooms__btn" data-room="4" disabled="">4к</button>
+                </div>
+                <p>Стомость квартиры, ₽</p>
+                <div class="filters-price">
+                    <span class="filters-price__min" id="priceMin"></span>
+                    <span class="filters-price__max" id="priceMax"></span>
+                </div>                
+                <input type="text" id="filterPrice" class="slider">
+                <p>Площадь, м<sup>2</sup></p>
+                <div class="filters-price">
+                    <span class="filters-price__min" id="squareMin"></span>
+                    <span class="filters-price__max" id="squareMax"></span>
+                </div>                
+                <input type="text" id="filterSquare" class="slider">
+                <div class="filters-reset"><button class="filters-reset__btn">Сбросить параметры</button></div>
+            </div>
+        </div>
+
+        <a href="#" onclick="scrollToTop()" class="scroll-up-btn"><img src="assets/img/arrow-up.svg" alt=""></a>
+
+		<script src="assets/js/vendor.min.js"></script>
+		<script  src="assets/js/main.js"></script>
+	</body>
+</html>

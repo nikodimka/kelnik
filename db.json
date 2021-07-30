@@ -1,0 +1,137 @@
+[
+  {
+    "id": "6103b5c443c46855f07ea1fa",
+    "image": "flat.jpg",
+    "flatName": "1-комнатная №100",
+    "square": 52.5,
+    "price": 7519313,
+    "floor": 2,
+    "room": 1
+  },
+  {
+    "id": "6103b5c4708c7a95f348c721",
+    "image": "flat.jpg",
+    "flatName": "1-комнатная №101",
+    "square": 83.7,
+    "price": 7399815,
+    "floor": 11,
+    "room": 1
+  },
+  {
+    "id": "6103b5c44dd46fc82535462f",
+    "image": "flat.jpg",
+    "flatName": "1-комнатная №102",
+    "square": 76.2,
+    "price": 6507434,
+    "floor": 14,
+    "room": 1
+  },
+  {
+    "id": "6103b5c405d27db410821bfb",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №103",
+    "square": 55.8,
+    "price": 7176588,
+    "floor": 11,
+    "room": 2
+  },
+  {
+    "id": "6103b5c411e33f933c40b98c",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №104",
+    "square": 81.1,
+    "price": 6043276,
+    "floor": 4,
+    "room": 2
+  },
+  {
+    "id": "6103b5c4e96f2af4e37facc3",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №105",
+    "square": 75.4,
+    "price": 7605471,
+    "floor": 3,
+    "room": 2
+  },
+  {
+    "id": "6103b5c4d879d34a83446148",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №106",
+    "square": 85.4,
+    "price": 7505952,
+    "floor": 6,
+    "room": 2
+  },
+  {
+    "id": "6103b5c4980108c4d28d713f",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №107",
+    "square": 68,
+    "price": 7594220,
+    "floor": 15,
+    "room": 2
+  },
+  {
+    "id": "6103b5c4cbf58ee8b32a1aad",
+    "image": "flat.jpg",
+    "flatName": "2-комнатная №108",
+    "square": 86.3,
+    "price": 5634695,
+    "floor": 13,
+    "room": 2
+  },
+  {
+    "id": "6103b5c4df58cad1ccb714c2",
+    "image": "flat.jpg",
+    "flatName": "3-комнатная №109",
+    "square": 64.7,
+    "price": 5584872,
+    "floor": 14,
+    "room": 3
+  },
+  {
+    "id": "6103b5c46b4ad5c04b4f6bca",
+    "image": "flat.jpg",
+    "flatName": "3-комнатная №110",
+    "square": 60.5,
+    "price": 6407019,
+    "floor": 4,
+    "room": 3
+  },
+  {
+    "id": "6103b5c48a7616c548378a76",
+    "image": "flat.jpg",
+    "flatName": "3-комнатная №111",
+    "square": 64.7,
+    "price": 5824647,
+    "floor": 1,
+    "room": 3
+  },
+  {
+    "id": "6103b5c4c35e36356e979b67",
+    "image": "flat.jpg",
+    "flatName": "3-комнатная №112",
+    "square": 61.9,
+    "price": 6548246,
+    "floor": 4,
+    "room": 3
+  },
+  {
+    "id": "6103b5c4dfe6e7546813f6e1",
+    "image": "flat.jpg",
+    "flatName": "3-комнатная №113",
+    "square": 65.5,
+    "price": 5694662,
+    "floor": 10,
+    "room": 3
+  },
+  {
+    "id": "6103b5c4c4c59f03a6cdbe21",
+    "image": "flat.jpg",
+    "flatName": "4-комнатная №114",
+    "square": 62.7,
+    "price": 6081633,
+    "floor": 8,
+    "room": 4
+  }
+]

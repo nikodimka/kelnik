@@ -1,0 +1,73 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* rSlider 1.0.5 */
+.rs-container * {
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.rs-container {
+    height: 45px;
+    position: relative;
+}
+.rs-container .rs-bg, .rs-container .rs-selected {
+    background-color: #0B1739;
+    border-radius: 1.5px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    opacity: .1;
+}
+.rs-container .rs-selected {
+    background-color: #3EB57C;
+    transition: all 0.2s linear;
+    width: 0;
+    opacity: 1;
+}
+.rs-container.disabled .rs-selected {
+    background-color: #ccc;
+    border-color: #bbb;
+}
+.rs-container .rs-pointer {
+    background-color: #3EB57C;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 14px;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s linear;
+    width: 14px;
+}
+.rs-container.disabled .rs-pointer {
+    border-color: #ccc;
+}
+.rs-container.disabled .rs-pointer {
+    cursor: default;
+}
+.rs-container.sliding .rs-selected,
+.rs-container.sliding .rs-pointer {
+    transition: none;
+}
+.rs-container .rs-scale {
+    left: 0;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+}
+.rs-container .rs-scale span {
+    display: none;
+}
+
+.rs-tooltip {
+    display: none;
+}
+.rs-container.disabled .rs-tooltip {
+    border-color: #ccc;
+    color: #999;
+}
