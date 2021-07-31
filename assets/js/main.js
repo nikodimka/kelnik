@@ -1,5 +1,34 @@
 (function() {
 	"use strict";
+	// сортировка по цене
+	var sortButton = document.querySelector(".flats-item__price-title");
+	function sortP() {
+		var classname = document.querySelectorAll('.flats-item:not(.flats-item__title)');
+		var divs = [];
+		for (var i = 0; i < classname.length; ++i) {
+			divs.push(classname[i]);
+		}
+		divs.sort(function(a, b) {
+			//return a.dataset.price.localeCompare(b.dataset.price);
+			if ( sortButton.classList.contains('text-green') ) {
+				return +a.dataset.price - +b.dataset.price;
+			} else {
+				return +b.dataset.price - +a.dataset.price;
+			}			
+		});
+
+		var br = document.getElementsByTagName(".flats-item")[0];
+
+		divs.forEach(function(el) {
+			document.querySelector('.flats-items').insertBefore(el, br);
+		});
+		sortButton.classList.toggle('text-green');
+		sortButton.querySelector('.arrow-up').classList.toggle('active');
+		sortButton.querySelector('.arrow-down').classList.toggle('active');
+	}
+
+	sortButton.addEventListener('click', sortP);
+
 	// выстроим квартиры
 	const listFlats = document.querySelector(".flats-items");
 	const showMore = document.querySelector('.flats-btn .btn');
@@ -15,12 +44,12 @@
 	  let key;
 	  for (key in content) {
 	    listFlats.innerHTML += `
-	    <div class="flats-item">
+	    <div class="flats-item" data-room="${content[key].room}" data-square="${content[key].square}" data-floor="${content[key].floor}" data-price="${content[key].price}">
             <div class="flats-item__plan"><img src="assets/img/${content[key].image}" alt=""></div>
-            <div class="flats-item__name" data-room="${content[key].room}">${content[key].flatName}</div>
-            <div class="flats-item__square" data-square="${content[key].square}">${content[key].square} <span class="d-none">м<sup>2</sup></span></div>
-            <div class="flats-item__floor" data-floor="${content[key].floor}">${content[key].floor} <span class="text-muted">из 17 <span class="d-none">этаж</span></span></div>
-            <div class="flats-item__price" data-price="${content[key].price}">${content[key].price.toLocaleString('ru')} <span class="d-none">₽</span></div>
+            <div class="flats-item__name">${content[key].flatName}</div>
+            <div class="flats-item__square">${content[key].square} <span class="d-none">м<sup>2</sup></span></div>
+            <div class="flats-item__floor">${content[key].floor} <span class="text-muted">из 17 <span class="d-none">этаж</span></span></div>
+            <div class="flats-item__price">${content[key].price.toLocaleString('ru')} <span class="d-none">₽</span></div>
         </div>
 	    `
 	  }
@@ -115,13 +144,13 @@
 	roomsBtns.forEach(roomsBtn => {
 	  roomsBtn.addEventListener('click', function(e) {
 	  	let dataRoom = roomsBtn.dataset.room;
-	  	let nameFlats = document.querySelectorAll('.flats-item__name');
+	  	let nameFlats = document.querySelectorAll('.flats-item:not(.flats-item__title)');
 	  	nameFlats.forEach(nameFlat => {
 	  		let dataRoomFlat = nameFlat.dataset.room;
 	  		if (dataRoomFlat == dataRoom) {
-	  			nameFlat.parentNode.style.display = '';
+	  			nameFlat.style.display = '';
 	  		} else {
-	  			nameFlat.parentNode.style.display = 'none';
+	  			nameFlat.style.display = 'none';
 	  		}
 	  	});
 	    document.querySelector('.filters-rooms__btn.active').classList.remove('active');
@@ -132,26 +161,28 @@
 	function priceValue(value) { // фильтр по цене
 		let minPrice = value.split(",")[0];
 		let maxPrice = value.split(",")[1];
-		let priceFlats = document.querySelectorAll('.flats-item__price');
+		let priceFlats = document.querySelectorAll('.flats-item:not(.flats-item__title)');
 	  	priceFlats.forEach(priceFlat => {
 	  		let dataPriceFlat = priceFlat.dataset.price;
 	  		if (dataPriceFlat >= minPrice && dataPriceFlat <= maxPrice) {
-	  			priceFlat.parentNode.style.display = '';
+	  			priceFlat.style.display = '';
 	  		} else {
-	  			priceFlat.parentNode.style.display = 'none';
+	  			priceFlat.style.display = 'none';
+	  			//document.querySelector('.flats-item__title').style.display = '';
 	  		}
 	  	});
 	}
 	function squareValue(value) { // фильтр по площади
 		let minSquare = value.split(",")[0];
 		let maxSquare = value.split(",")[1];
-		let squareFlats = document.querySelectorAll('.flats-item__square');
+		let squareFlats = document.querySelectorAll('.flats-item:not(.flats-item__title)');
 	  	squareFlats.forEach(squareFlat => {
 	  		let dataSquareeFlat = squareFlat.dataset.square;
 	  		if (dataSquareeFlat >= minSquare && dataSquareeFlat <= maxSquare) {
-	  			squareFlat.parentNode.style.display = '';
+	  			squareFlat.style.display = '';
 	  		} else {
-	  			squareFlat.parentNode.style.display = 'none';
+	  			squareFlat.style.display = 'none';
+	  			//document.querySelector('.flats-item__title').style.display = '';
 	  		}
 	  	});
 	}
@@ -165,9 +196,9 @@
 			roomsBtn.classList.remove('active');
 		});
 		defaultRoom.classList.add('active');
-		let nameFlats = document.querySelectorAll('.flats-item__name');
+		let nameFlats = document.querySelectorAll('.flats-item');
 	  	nameFlats.forEach(nameFlat => {
-	  			nameFlat.parentNode.style.display = '';
+	  			nameFlat.style.display = '';
 	  	});
 	  	/*priceValue(defaultPrice);
 	  	squareValue(defaultSquare);*/
