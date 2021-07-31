@@ -59,7 +59,7 @@
 	showMore.addEventListener('click', () => {
         if (loadedFlats <= (totalFlats - 4)) {
             loadedFlats = loadedFlats + 4; // покажем по 4 квартиры
-            if (loadedFlats <= 0 ) {
+            if (loadedFlats >= 12 ) {
             	showMore.textContent = 'Загрузить еще 0 из ' + totalFlats;
             } else {
             	showMore.textContent = 'Загрузить еще ' + ((totalFlats - 4) - loadedFlats) + ' из ' + totalFlats;
