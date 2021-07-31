@@ -147,6 +147,9 @@ sup {
 .flats-btn {
     margin: 45px 0;
 }
+.flats-item__price-title {
+    cursor: pointer;
+}
 .btn {
     font-family: 'PTRootUIWebBold';
     padding: 0 24px;
